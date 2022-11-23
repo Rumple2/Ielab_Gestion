@@ -73,7 +73,7 @@
 
   <main id="main" class=" alert-info">
   		<div id="login-left">
-  			<img src="assets/img/IELab.png">
+  			<img src="css/img/IELab.png">
   		</div>
   		<div id="login-right">
   			<div class="card col-md-8">

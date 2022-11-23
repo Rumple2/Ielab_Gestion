@@ -23,14 +23,14 @@
     }
 
   </style>
-<table id="" class="bg-dark" width="80%" style="margin-left: 15%; padding:50px; color: dark; ">
+<table id="" class="bg-dark">
 <center><h2>TOUTE LES OPERATIONS DE IELAB </h2></center>
   <thead class="bg-dark p-2" style="margin-left: 5%; padding:50px;">
     <tr>
       <th>id</th>
-      <th>Désignation</th>
+      <th>Designation</th>
       <th>Prix unitaire</th>
-      <th>Qunatité</th>
+      <th>Qunatite</th>
       <th>Montant</th>
       <th>Date</th>
       <th>Action</th>

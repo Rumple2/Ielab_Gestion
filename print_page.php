@@ -1,3 +1,10 @@
+<?php 
+  session_start();
+?>
+<!DOCTYPE html>
+<html lang="FR">
+        <?php include('header.php');   ?>
+        <link rel="stylesheet" href="css/animation.scss" type="text/css" />
 <?php
   require("RumpleQuery.php");
   $rmQuery = new RumpleQuery();
@@ -16,24 +23,34 @@
     td{
       padding: 0px;
       margin: 0;
-      border: 1px solid;
     }
-    tr{
+    thead tr th{
+      background-color: grey;
+      text-align : center;
+    }
+    tbody tr td{
+      background-color: #C9BDB3;
+      border: 1px solid black;
+      text-align : center;
+    }
+    
+    tbody tr{
       padding: 10px;
       font-weight: bold;
-      border: 1px solid;
+      border: 1px solid black;
+      text-align : center;
     }
     tr:hover{
       padding: 20px;
-      background-color: grey;
+      background-color: white;
     }
 
   </style>
-<table id="" class="bg-dark" width="80%" style="margin-left: 15%; padding:50px; color: dark; ">
+  <table id="" class="bg-dark m-2">
 <center><h2>TOUTE LES OPERATIONS DE IELAB </h2></center>
   <thead class="bg-dark p-2">
     <tr>
-    <h2>Recette</h2>
+    <center><h2>Recette</h2></center>
       <th>id</th>
       <th>Désignation</th>
       <th>Prix unitaire</th>
@@ -57,17 +74,16 @@
       <td><?php echo($operation['date']); ?> </td>
       <td><?php echo($operation['action']); ?> </td>
       <td><?php echo($operation['nom_user']); ?> </td>
-      <td><a href="index.php?page=edit&id=<?php echo $operation['id']; ?>"><i class="fa fa-edit"></i></a> </td>
     </tr>
   <?php } ?> 
   </tbody>
 </table>
 <br />
-<table id="" class=" mt-2" width="80%" style="margin-left: 15%; padding:50px; color: dark;">
+<table id="" class=" m-2">
   <thead class="bg-dark p-2 ">
     
     <tr>
-    <h2>Depense</h2>
+      <center><h2>Depense</h2><center>
       <th>id</th>
       <th>Désignation</th>
       <th>Prix unitaire</th>
@@ -97,6 +113,7 @@
   </tbody>
   
 </table>
+  </div>
 <script>
   
 $('#bubbleEx').mdbEditor({
@@ -105,4 +122,3 @@ $('#bubbleEx').mdbEditor({
 
 $('.dataTables_length').addClass('bs-select');
 </script>
-</div>

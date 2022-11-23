@@ -1,3 +1,13 @@
+<?php 
+  session_start();
+?>
+<!DOCTYPE html>
+<html lang="FR">
+        <?php include('header.php');   ?>
+        <link rel="stylesheet" href="css/animation.scss" type="text/css" />
+    <body>
+        <?php include('topbar.php'); ?> 
+        <?php include('navbar.php'); ?>
 <?php
   require("RumpleQuery.php");
   $rmQuery = new RumpleQuery();
@@ -9,30 +19,33 @@
 		height: 600px;
 		
 	}
-	th{
-		color: black;
-		font-weight: bold;
-		padding-left: 15%;
-	}
-    td{
-      padding: 10px;
+  td{
+      padding: 0px;
       margin: 0;
-      border: 1px solid black;
-	  color: black;
-		font-weight: bold;
     }
-    tr{
+    thead tr th{
+      background-color: grey;
+      text-align : center;
+    }
+    tbody tr td{
+      background-color: #C9BDB3;
+      border: 1px solid black;
+      text-align : center;
+    }
+    
+    tbody tr{
       padding: 10px;
       font-weight: bold;
       border: 1px solid black;
+      text-align : center;
     }
     tr:hover{
       padding: 20px;
-      background-color: grey;
+      background-color: white;
     }
 
   </style>
-<table id="" class="" width="80%" style="margin-left: 15%; color: white; ">
+<table id="" class="">
   <thead class="p-2" style="margin-left: 5%; padding:50px;">
     <tr>
       <th>id</th>
@@ -58,3 +71,5 @@ $('#bubbleEx').mdbEditor({
 $('.dataTables_length').addClass('bs-select');
 </script>
 </div>
+</body>
+</html>
